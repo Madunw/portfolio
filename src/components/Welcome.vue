@@ -11,7 +11,7 @@
         <GithubIcon />
       </div>
 
-      <button class="btn">Contact Me</button>
+      <button class="btn"  @click="sendEmail">Contact Me</button>
     </div>
     <div class="illustration">
       <img src="../assets/welcome-illustration.svg" alt="illustration" />
@@ -29,6 +29,11 @@ export default {
   components: {
     GithubIcon,
   },
+  methods: {
+    sendEmail() {
+      window.location.href = 'mailto:you@example.com';
+    },
+  },
 };
 </script>
 
@@ -39,7 +44,7 @@ export default {
   align-items: center;
   flex-wrap: wrap;
   color: rgb(13, 34, 51);
-  padding: 0 2rem 0 8rem;
+  padding: 0 2rem 0 12vw;
 }
 
 .main {
@@ -112,7 +117,7 @@ export default {
   transform: scale(0.9);
 }
 
-/* 响应式布局：移动端隐藏 illustration */
+
 @media (max-width: 768px) {
   .illustration {
     display: none;
