@@ -132,11 +132,11 @@ img {
 }
 
 .card .info-card p {
-  font-size: 20px;
+  font-size: .9vw;
 }
 
 .card .technologies {
-  margin: 20px; /* 添加上下边距，可根据需要调整 */
+  margin: .5vw; /* 添加上下边距，可根据需要调整 */
 }
 
 .card .info-card .technologies .technology-item {
@@ -145,9 +145,8 @@ img {
   background-color: #ffffff;
   color: #000000;
   border-radius: 50px;
-  margin-right: 5px;
   height: 1.7rem;
-  font-size: 1.4rem;
+  font-size: .9vw;
   padding: 0.3rem 0.8rem;
   margin: 5px;
   border: 1px solid #a0a0a0;
@@ -159,4 +158,13 @@ img {
   vertical-align: middle;
   margin-right: 5px;
 }
+@media screen and (max-width: 768px) {
+  .card .info-card .text {
+  margin: 0 1rem;
+}
+  .card .info-card .technologies .technology-item {
+    height: .8rem;
+  }
+}
+
 </style>

@@ -35,9 +35,9 @@ export default {
     flex-wrap: wrap;
   }
   .project {
-    margin: 5rem;
     width: 820px;
     height: 820px;
+    margin-bottom: 1vw;
 }
   </style>
   

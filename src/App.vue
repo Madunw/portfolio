@@ -118,7 +118,7 @@ section p {
 }
 #welcome {
   background-color: #fafcff;
-  padding: 0 2rem 0 8rem;
+  padding: 0;
 }
 #projects {
   background-color: #32425a;

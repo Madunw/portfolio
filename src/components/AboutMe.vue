@@ -51,6 +51,8 @@ import npmIcon from '@/assets/icons/npm-icon.svg';
 import gitIcon from '@/assets/icons/git-icon.svg';
 import seleniumIcon from '@/assets/icons/selenium-icon.svg';
 import viteIcon from '@/assets/icons/vite-icon.svg';
+import remixIcon from '@/assets/icons/remix-icon.png';
+import hardhatIcon from '@/assets/icons/hardhat-icon.svg';
 
 export default {
   name: 'AboutMe',
@@ -67,9 +69,12 @@ export default {
         { name: 'Solidity', icon: solidityIcon },
         { name: 'OpenZeppelin', icon: openzeppelinIcon },
         { name: 'EthersJS', icon: ethersIcon },
+        { name: 'Remix', icon: remixIcon },
+        { name: 'Hardhat', icon: hardhatIcon },
         { name: 'Apache', icon: apacheIcon },
         { name: 'Npm', icon: npmIcon },
-        { name: 'Git', icon: gitIcon }
+        { name: 'Git', icon: gitIcon },
+        
         
 
       ],
@@ -82,22 +87,29 @@ export default {
 #aboutme {
   display: flex;
   align-items: center;
-  padding: 5rem;
+  flex-wrap: wrap;
+  padding: 5vm;
 }
+
 #introduction {
-  margin: auto 5rem;
+  margin: 5rem 3rem;
   width: 40%;
   color: #171a4b;
 }
+#introduction p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
 #my-skills {
-  margin: auto 5rem;
+  margin: auto 3rem;
   width: 40%;
+  font-size: 1.6rem;
 }
 #skills {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  font-size: 1.4rem;
+  font-size: .9vw;
 }
 .skill {
   padding: 1rem 2rem;
@@ -113,9 +125,9 @@ export default {
   color: #000000;
   border-radius: 50px;
   margin-right: 5px;
-  height: 3rem;
+  height: 1.8vw;
   padding: 0.4rem 1.2rem;
-  margin: 1rem;
+  margin: .5vw;
   border: 1px solid #474747;
 }
 
@@ -123,5 +135,29 @@ export default {
   max-height: 100%;
   width: auto;
   vertical-align: middle;
+}
+@media screen and (max-width: 1660px) {
+  #introduction p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+}
+
+@media screen and (max-width: 1280px) {
+  #introduction {
+  margin: 0;
+}
+  #introduction {
+  width: 100%;
+}
+
+#my-skills {
+  width: 100%;
+  margin: 0;
+}
+.skill-item {
+  height: 1rem;
+  font-size: 1rem;
+}
 }
 </style>

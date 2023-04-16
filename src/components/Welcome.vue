@@ -1,8 +1,8 @@
 <template id="welcome">
   <div id="welcome">
     <div class="main">
-      <h1>Hi</h1>
-      <h1>I'm MAYUE</h1>
+      <h1 class="title">Hi</h1>
+      <h1 class="title">I'm MAYUE</h1>
       <p>
         I am a Frontend Developer based in Tokyo. I'm actively seeking new
         employment opportunities, specifically within the Web3 field.
@@ -39,12 +39,16 @@ export default {
   align-items: center;
   flex-wrap: wrap;
   color: rgb(13, 34, 51);
+  padding: 0 2rem 0 8rem;
 }
 
 .main {
   flex: 1;
+  width: 100%;
 }
-
+.main p{
+  font-size: 1vw;
+}
 .illustration {
   flex: 0 0 50%;
   text-align: center;
@@ -54,8 +58,8 @@ export default {
   width: 100%;
 }
 
-h1 {
-  font-size: 8rem;
+.title {
+  font-size: 5vw; /* 使用vw单位，根据视窗宽度改变字体大小 */
   font-weight: 700;
   margin-left: 1rem;
   margin-bottom: 0;
@@ -113,9 +117,14 @@ h1 {
   .illustration {
     display: none;
   }
-
-  .main {
-    padding: 1rem;
+  #welcome {
+    padding: 0 2rem;
+  }
+  .icons a{
+   margin: auto;
+  }
+.main {
+    padding: auto;
     text-align: center;
   }
 
