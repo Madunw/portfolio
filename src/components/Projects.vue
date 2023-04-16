@@ -1,0 +1,43 @@
+<template>
+  <h1>Projects</h1>
+  <div class="project-boxes">
+    <div class="project">
+    <ProjectBox />
+  </div>
+  <div class="project">
+    <ProjectBox1 />
+  </div>
+  </div>
+</template>
+
+<script>
+  import ProjectBox from './ProjectBox.vue';
+  import ProjectBox1 from './ProjectBox1.vue';
+export default {
+  name: 'Projects',
+  data() {
+    return {
+    };
+  },
+  components: {
+  ProjectBox,
+  ProjectBox1,
+}
+}
+
+</script>
+
+<style scoped>
+  .project-boxes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .project {
+    margin: 5rem;
+    width: 820px;
+    height: 820px;
+}
+  </style>
+  

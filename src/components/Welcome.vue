@@ -1,0 +1,125 @@
+<template id="welcome">
+  <div id="welcome">
+    <div class="main">
+      <h1>Hi</h1>
+      <h1>I'm MAYUE</h1>
+      <p>
+        I am a Frontend Developer based in Tokyo. I'm actively seeking new
+        employment opportunities, specifically within the Web3 field.
+      </p>
+      <div class="icons">
+        <a href="https://github.com/Madunw" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/icons/github-icon.svg" alt="Github" />
+          </a>
+          <SocialIcon src="../assets/icons/github-icon.svg" :text="github"/>
+        </div>
+
+        <button class="btn"> Contact Me
+        </button>
+      
+    </div>
+    <div class="illustration">
+      <img src="../assets/welcome-illustration.svg" alt="illustration" />
+    </div>
+  </div>
+</template>
+
+<script>
+  import SocialIcon from '@/components/SocialIcon.vue';
+  export default {
+  name: 'Welcome',
+  components: {
+    SocialIcon,
+  }
+};
+</script>
+
+<style scoped>
+#welcome {
+  display: flex;
+  justify-content: space-between; /* 修改 */
+  align-items: center;
+  flex-wrap: wrap;
+  color: rgb(13, 34, 51);
+}
+
+.main {
+  flex: 1;
+}
+
+.illustration {
+  flex: 0 0 50%; 
+  text-align: center;
+}
+
+.illustration img{
+  width: 100%;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+.icons img {
+  width: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.btn {
+ padding: 1.1em 2em;
+ background: none;
+ border: 2px solid #fff;
+ font-size: 1rem;
+ color: #131313;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+ transition: all 0.3s;
+ border-radius: 12px;
+ background-color: #fadb2d;
+ font-weight: bolder;
+ box-shadow: 0 2px 0 2px rgb(13, 34, 51);
+}
+
+.btn:before {
+ content: "";
+ position: absolute;
+ width: 100px;
+ height: 120%;
+ background-color: #eb6942;
+ top: 50%;
+ transform: skewX(30deg) translate(-150%, -50%);
+ transition: all 0.5s;
+}
+
+.btn:hover {
+ background-color: #43c6ee;
+ color: #fff;
+ box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn:hover::before {
+ transform: skewX(30deg) translate(150%, -50%);
+ transition-delay: 0.1s;
+}
+
+.btn:active {
+ transform: scale(0.9);
+}
+
+
+/* 响应式布局：移动端隐藏 illustration */
+@media (max-width: 768px) {
+  .illustration {
+    display: none;
+  }
+}
+
+
+
+</style>
