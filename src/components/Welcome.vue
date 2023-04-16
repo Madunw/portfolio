@@ -8,15 +8,10 @@
         employment opportunities, specifically within the Web3 field.
       </p>
       <div class="icons">
-        <a href="https://github.com/Madunw" target="_blank" rel="noopener noreferrer">
-          <img src="../assets/icons/github-icon.svg" alt="Github" />
-          </a>
-          <SocialIcon src="../assets/icons/github-icon.svg" :text="github"/>
-        </div>
+        <GithubIcon />
+      </div>
 
-        <button class="btn"> Contact Me
-        </button>
-      
+      <button class="btn">Contact Me</button>
     </div>
     <div class="illustration">
       <img src="../assets/welcome-illustration.svg" alt="illustration" />
@@ -25,19 +20,22 @@
 </template>
 
 <script>
-  import SocialIcon from '@/components/SocialIcon.vue';
-  export default {
+import GithubIcon from '@/components/GithubIcon.vue';
+export default {
   name: 'Welcome',
+  data() {
+    return {};
+  },
   components: {
-    SocialIcon,
-  }
+    GithubIcon,
+  },
 };
 </script>
 
 <style scoped>
 #welcome {
   display: flex;
-  justify-content: space-between; /* 修改 */
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   color: rgb(13, 34, 51);
@@ -48,11 +46,11 @@
 }
 
 .illustration {
-  flex: 0 0 50%; 
+  flex: 0 0 50%;
   text-align: center;
 }
 
-.illustration img{
+.illustration img {
   width: 100%;
 }
 
@@ -63,63 +61,76 @@ h1 {
   margin-bottom: 0;
 }
 
-.icons img {
-  width: 3rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+.icons {
+  display: flex;
+  margin: 1rem 0;
 }
 
-
 .btn {
- padding: 1.1em 2em;
- background: none;
- border: 2px solid #fff;
- font-size: 1rem;
- color: #131313;
- cursor: pointer;
- position: relative;
- overflow: hidden;
- transition: all 0.3s;
- border-radius: 12px;
- background-color: #fadb2d;
- font-weight: bolder;
- box-shadow: 0 2px 0 2px rgb(13, 34, 51);
+  padding: 1.1em 2em;
+  background: none;
+  border: 2px solid #fff;
+  font-size: 1rem;
+  color: #131313;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border-radius: 12px;
+  background-color: #fde03d;
+  font-weight: bolder;
+  box-shadow: 0 2px 0 2px rgb(13, 34, 51);
 }
 
 .btn:before {
- content: "";
- position: absolute;
- width: 100px;
- height: 120%;
- background-color: #eb6942;
- top: 50%;
- transform: skewX(30deg) translate(-150%, -50%);
- transition: all 0.5s;
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #eb6942;
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
 }
 
 .btn:hover {
- background-color: #43c6ee;
- color: #fff;
- box-shadow: 0 2px 0 2px #0d3b66;
+  background-color: #43c6ee;
+  color: #fff;
+  box-shadow: 0 2px 0 2px #0d3b66;
 }
 
 .btn:hover::before {
- transform: skewX(30deg) translate(150%, -50%);
- transition-delay: 0.1s;
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
 }
 
 .btn:active {
- transform: scale(0.9);
+  transform: scale(0.9);
 }
-
 
 /* 响应式布局：移动端隐藏 illustration */
 @media (max-width: 768px) {
   .illustration {
     display: none;
   }
+
+  .main {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin-top: 2rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .icons {
+    margin-top: 1rem;
+  }
 }
-
-
-
 </style>

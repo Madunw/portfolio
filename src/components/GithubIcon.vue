@@ -1,17 +1,23 @@
 <template>
-	<div id="linkedin" class="social-btn flex-center">
-			<img src=src><span>{{text}}</span>
+  <a href="https://github.com/Madunw" target="_blank" rel="noopener noreferrer">
+	<div id="github" class="social-btn flex-center">
+			<img src="@/assets/icons/github-icon.svg"/>
+      <span>github.com/Madunw</span>
 		</div>
+  </a>
 </template>
 
 <script>
 export default {
-  name: 'SocialIcon',
-  props:["src","text"]
+  name: 'GithubIcon',
 };
 </script>
 
 <style scoped>
+img {
+  height: 3rem;
+  width: 3rem;
+}
 .social-links,.flex-center {
   display: flex;
   justify-content: center;
@@ -20,12 +26,11 @@ export default {
 
 .social-btn {
   cursor: pointer;
-  height: 50px;
-  width: 50px;
+  height: 3rem;
+  width: 3rem;
   font-family: 'Titillium Web', sans-serif;
   color: #333;
   border-radius: 10px;
-  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   background: white;
   margin: 5px;
   transition: 0.3s;
@@ -43,16 +48,17 @@ export default {
   transition: 0.3s;
   text-align: center;
   margin-left: 5px;
+  font-weight: bold;
 }
 
 .social-btn:hover {
-  width: 150px;
+  width: 15rem;
   border-radius: 5px;
 }
 
 .social-btn:hover span {
   padding: 2px;
-  width: 80px;
+  width: 16rem;
 }
 
 #twitter svg {

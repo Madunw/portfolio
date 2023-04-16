@@ -33,7 +33,6 @@
 import Welcome from './components/Welcome.vue';
 import Projects from './components/Projects.vue';
 import AboutMe from './components/AboutMe.vue';
-
 import Contact from './components/Contact.vue';
 
 export default {
@@ -41,14 +40,13 @@ export default {
   data() {
     return {
       sections: [],
-      sidebarStyle: {},
+      sidebarStyle: { right: '-400px' }, // 设置初始侧边栏位置为 -400px
     };
   },
   components: {
     Welcome,
     Projects,
     AboutMe,
-
     Contact,
   },
 
@@ -58,16 +56,16 @@ export default {
     // 监听滚动事件，根据滚动距离设置侧边栏的位置
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
-        this.sidebarStyle = { right: '20px' };
+        this.sidebarStyle.right = '20px';
       } else {
-        this.sidebarStyle = { right: '-400px' };
+        this.sidebarStyle.right = '-400px';
       }
     });
   },
   methods: {
     getBackgroundColor(index) {
       // 新增方法，根据索引返回不同的背景颜色
-      const colors = ['#ff6c52', '#f3d218', '#29ffa2', '#61ccff'];
+      const colors = ['#ff6c52', '#f3d218', '#29ffa2', '#56b3ff'];
       // 修改处，如果索引超出颜色数组范围，返回默认颜色
       return colors[index] || '#ffffff';
     },
