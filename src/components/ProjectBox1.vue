@@ -3,7 +3,9 @@
     <div class="img-card">
       <img src="@/assets/zipper-wallet.png" />
     </div>
-    <div class="mask">Go to site</div>
+    
+    <a href="http://www.mayue.me/projects/zipper-wallet" target="_blank" class="mask">Go to site</a>
+
     <div class="info-card">
       <div class="text">
         <h2><strong>Zipper Wallet</strong></h2>

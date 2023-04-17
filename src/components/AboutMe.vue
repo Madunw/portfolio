@@ -53,6 +53,7 @@ import seleniumIcon from '@/assets/icons/selenium-icon.svg';
 import viteIcon from '@/assets/icons/vite-icon.svg';
 import remixIcon from '@/assets/icons/remix-icon.png';
 import hardhatIcon from '@/assets/icons/hardhat-icon.svg';
+import pytorchIcon from '@/assets/icons/pytorch-icon.svg';
 
 export default {
   name: 'AboutMe',
@@ -66,6 +67,7 @@ export default {
         { name: 'Vite', icon: viteIcon },
         { name: 'Python', icon: pythonIcon},
         { name: 'Selenium', icon: seleniumIcon},
+        { name: 'PyTorch', icon: pytorchIcon},
         { name: 'Solidity', icon: solidityIcon },
         { name: 'OpenZeppelin', icon: openzeppelinIcon },
         { name: 'EthersJS', icon: ethersIcon },
@@ -136,6 +138,59 @@ export default {
   width: auto;
   vertical-align: middle;
 }
+
+
+
+.email-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #56b3ff;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  margin: 1rem 0;
+  text-decoration:none;
+  position: relative;
+}
+
+.email-link:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffdc2b;
+  
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.email-link:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.email-link span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.email-link:hover span {
+  color: #152941;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+
+
 @media screen and (max-width: 1660px) {
   #introduction p {
   font-size: 1.2rem;

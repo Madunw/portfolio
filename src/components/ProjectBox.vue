@@ -3,7 +3,9 @@
     <div class="img-card">
       <img src="@/assets/nutrakr.png" />
     </div>
-    <div class="mask">Go to site</div>
+
+    <a href="http://www.nutrakr.com" target="_blank" class="mask">Go to site</a>
+    
     <div class="info-card">
       <div class="text">
         <h2><strong>Nutrakr</strong></h2>
