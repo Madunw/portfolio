@@ -35,9 +35,16 @@ export default {
     flex-wrap: wrap;
   }
   .project {
-    width: 34rem;
+    width: 30rem;
     margin: 2rem;
 
 }
+@media (orientation:portrait) {
+  .project {
+    width: 40rem;
+    margin-left: 3rem;
+}
+}
+
   </style>
   

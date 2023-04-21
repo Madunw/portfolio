@@ -54,6 +54,7 @@ import viteIcon from '@/assets/icons/vite-icon.svg';
 import remixIcon from '@/assets/icons/remix-icon.png';
 import hardhatIcon from '@/assets/icons/hardhat-icon.svg';
 import pytorchIcon from '@/assets/icons/pytorch-icon.svg';
+import typescriptIcon from '@/assets/icons/typescript-icon.svg';
 
 export default {
   name: 'AboutMe',
@@ -63,6 +64,7 @@ export default {
         { name: 'HTML', icon: html5Icon },
         { name: 'CSS', icon: cssIcon },
         { name: 'JavaScript', icon: javascriptIcon },
+        { name: 'TypeScript', icon: typescriptIcon },
         { name: 'Vue', icon: vueIcon },
         { name: 'Vite', icon: viteIcon },
         { name: 'Python', icon: pythonIcon},
@@ -89,7 +91,6 @@ export default {
 #aboutme {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   padding: 5vm;
 }
 
@@ -99,8 +100,8 @@ export default {
   color: #171a4b;
 }
 #introduction p {
-  font-size: 1.8rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
 }
 #my-skills {
   margin: auto 3rem;
@@ -111,7 +112,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  font-size: .9vw;
 }
 .skill {
   padding: 1rem 2rem;
@@ -126,11 +126,12 @@ export default {
   background-color: #ffffff;
   color: #000000;
   border-radius: 50px;
-  margin-right: 5px;
+  margin-right: 6px;
   height: 1.8vw;
-  padding: 0.4rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   margin: .5vw;
   border: 1px solid #474747;
+  font-size: .8rem;
 }
 
 .skill-icon {
@@ -191,14 +192,9 @@ export default {
 
 
 
-@media screen and (max-width: 1660px) {
-  #introduction p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-}
 
-@media screen and (max-width: 1280px) {
+
+@media (orientation: portrait) {
   #introduction {
   margin: 0;
 }
@@ -211,7 +207,7 @@ export default {
   margin: 0;
 }
 .skill-item {
-  height: 1rem;
+  height: 1.2rem;
   font-size: 1rem;
 }
 }

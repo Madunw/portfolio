@@ -53,9 +53,6 @@ export default {
   flex: 1;
   width: 100%;
 }
-.main p{
-  font-size: 1vw;
-}
 .illustration {
   flex: 0 0 50%;
   text-align: center;
@@ -66,7 +63,7 @@ export default {
 }
 
 .title {
-  font-size: 5vw; /* 使用vw单位，根据视窗宽度改变字体大小 */
+  font-size: 5rem; 
   font-weight: 700;
   margin-left: 1rem;
   margin-bottom: 0;
@@ -74,14 +71,14 @@ export default {
 
 .icons {
   display: flex;
-  margin: 1rem 0;
+  margin: .5rem 0;
 }
 
 .btn {
   padding: 1.1em 2em;
   background: none;
   border: 2px solid #fff;
-  font-size: 1rem;
+  font-size: .8rem;
   color: #131313;
   cursor: pointer;
   position: relative;
@@ -119,40 +116,36 @@ export default {
   transform: scale(0.9);
 }
 .mouse {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
-@media (max-width: 768px) {
+@media (orientation:portrait) {
+  .title {
+  font-size: 5rem;
+}
+  #welcome {
+    padding: 1rem;
+  }
   .illustration {
     display: none;
   }
-  #welcome {
-    padding: 0 2rem;
-  }
-  .icons a{
-   margin: auto;
-  }
-.main {
+  .main {
     padding: auto;
     text-align: center;
+   
   }
-
-  h1 {
-    font-size: 4rem;
-    margin-top: 2rem;
+  .main p{
+    font-size: 1rem;
   }
-
-  p {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-  }
-
-  .icons {
-    margin-top: 1rem;
-  }
-
   .mouse {
     display: none;
 }
+.icons a{
+   margin: 2rem auto;
+  }
+.btn {
+  font-size: 1rem;
 }
+}
+
 </style>

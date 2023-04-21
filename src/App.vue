@@ -89,6 +89,7 @@ export default {
 * {
   padding: 0;
   margin: 0;
+  font-size: 1vw;
 }
 #app {
   height: 100%;
@@ -113,9 +114,6 @@ section h1 {
   margin-bottom: 2em;
 }
 
-section p {
-  font-size: 1.5rem;
-}
 #welcome {
   background-color: #fafcff;
   padding: 0;
@@ -161,9 +159,19 @@ section {
 }
 
 
-@media screen and (orientation: portrait) {
+@media (orientation: portrait){
+  * {
+    font-size: 3vw;
+  }
   #aboutme {
     flex-direction: column;
   }
+  section {
+  padding: 3rem;
 }
+.sidebar {
+  display: none;
+}
+}
+
 </style>

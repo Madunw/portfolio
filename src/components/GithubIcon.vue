@@ -15,8 +15,8 @@ export default {
 
 <style scoped>
 img {
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
 }
 .social-links,.flex-center {
   display: flex;
@@ -52,7 +52,7 @@ img {
 }
 
 .social-btn:hover {
-  width: 15rem;
+  width: 20rem;
   border-radius: 5px;
 }
 

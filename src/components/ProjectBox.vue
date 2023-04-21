@@ -109,7 +109,7 @@ img {
   text-align: center;
   line-height: 250px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3rem;
   opacity: 0;
   color: #000000;
 }
@@ -134,11 +134,10 @@ img {
 }
 
 .card .info-card p {
-  font-size: .9vw;
 }
 
 .card .technologies {
-  margin: .5vw; /* 添加上下边距，可根据需要调整 */
+  margin: .5rem; /* 添加上下边距，可根据需要调整 */
 }
 
 .card .info-card .technologies .technology-item {
@@ -147,8 +146,8 @@ img {
   background-color: #ffffff;
   color: #000000;
   border-radius: 50px;
-  height: 1.7rem;
-  font-size: .9vw;
+  height: 1rem;
+  font-size: .8rem;
   padding: 0.3rem 0.8rem;
   margin: 5px;
   border: 1px solid #a0a0a0;
@@ -160,13 +159,29 @@ img {
   vertical-align: middle;
   margin-right: 5px;
 }
-@media screen and (max-width: 768px) {
+@media (orientation:portrait) {
   .card .info-card .text {
   margin: 0 1rem;
 }
+  .card:hover .mask {
+  display: none;
+}
+.card:hover {
+  display: none;
+}
+}
+
+/* @media (orientation:portrait) {
+  .card .info-card .text {
+  margin: 0 1rem;
+}
+
   .card .info-card .technologies .technology-item {
     height: .8rem;
   }
-}
 
+  .card .info-card p {
+  font-size: 3vw;
+}
+} */
 </style>
