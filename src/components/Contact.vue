@@ -3,7 +3,7 @@
     <h1>Contact Me</h1>
     <img src="@/assets/icons/mail-icon.svg" class="mail-icon">
     <a @click="sendEmail" class="email-link">
-      <span>mayue2022@gmail.com</span>
+      <span>job@mayue.me</span>
     </a>
     <Welcome />
   </div>
@@ -13,7 +13,7 @@ export default {
   name: 'Contact',
   methods: {
     sendEmail() {
-      window.location.href = "mailto:mayue2022@gmail.com";
+      window.location.href = "mailto:job@mayue.me";
     }
   }
 };

@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     sendEmail() {
-      window.location.href = 'mailto:you@example.com';
+      window.location.href = 'mailto:job@mayue.me';
     },
   },
 };
