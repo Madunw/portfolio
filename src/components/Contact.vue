@@ -2,10 +2,7 @@
   <div class="contact-container">
     <h1>Contact Me</h1>
     <img src="@/assets/icons/mail-icon.svg" class="mail-icon">
-    <a @click="sendEmail" class="email-link">
-      <span>job@mayue.me</span>
-    </a>
-    <Welcome />
+    <button class="email-link"  @click="sendEmail"><span>job@mayue.me</span></button>
   </div>
 </template>
 <script>
@@ -39,6 +36,7 @@ h1 {
 }
 
 .email-link {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

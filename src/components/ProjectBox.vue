@@ -1,31 +1,29 @@
 <template>
   <div class="card">
     <div class="img-card">
-      <img src="@/assets/nutrakr.png" />
+      <img :src=project.img />
     </div>
 
-    <a href="http://www.nutrakr.com" target="_blank" class="mask">Go to site</a>
+    <a :href=project.url target="_blank" class="mask">Go to site</a>
     
     <div class="info-card">
       <div class="text">
-        <h2><strong>Nutrakr</strong></h2>
+        <h2><strong>{{project.title}}</strong></h2>
         <p>
-          <strong>A blockchain health management app</strong> to assist users in achieving nutrition and weight management goals. Features include daily nutrient requirement calculation, food nutrient content analysis, and weight management challenges.
+          <strong>{{project.summary}}</strong> {{project.text1}}
         <br>
-          I have issued a cryptocurrency a crypto token(SoulBound) reward system
-          to incentivize successful challengers. with a crypto token reward
-          system.
+        {{project.text2}}
         </p>
       </div>
       <div class="technologies">
         <ul>
           <li
-            v-for="technologe in technologeList"
+            v-for="technologe in project.technologeList"
             v-bind:key="technologe.name"
             class="technology-item"
           >
             <img :src="technologe.icon" class="technology-icon" />
-            {{ technologe.name }}
+            {{technologe.name }}
           </li>
         </ul>
       </div>
@@ -34,31 +32,11 @@
 </template>
 
 <script>
-import vueIcon from '@/assets/icons/vue-icon.svg';
-import html5Icon from '@/assets/icons/html5-icon.svg';
-import cssIcon from '@/assets/icons/css-icon.svg';
-import javascriptIcon from '@/assets/icons/javascript-icon.svg';
-import solidityIcon from '@/assets/icons/solidity-icon.svg';
-import openzeppelinIcon from '@/assets/icons/openzeppelin-icon.svg';
-import ethersIcon from '@/assets/icons/ethers-icon.svg';
-import elementUiIcon from '@/assets/icons/element-ui-icon.svg';
 
 export default {
   name: 'ProjectBox',
-  data() {
-    return {
-      showAddToCart: false,
-      technologeList: [
-        { name: 'Vue', icon: vueIcon },
-        { name: 'HTML', icon: html5Icon },
-        { name: 'CSS', icon: cssIcon },
-        { name: 'JavaScript', icon: javascriptIcon },
-        { name: 'ElementUI', icon: elementUiIcon },
-        { name: 'Solidity', icon: solidityIcon },
-        { name: 'OpenZeppelin', icon: openzeppelinIcon },
-        { name: 'EthersJS', icon: ethersIcon },
-      ],
-    };
+  props: {
+    project: Object,
   },
 };
 </script>
@@ -160,28 +138,24 @@ img {
   margin-right: 5px;
 }
 @media (orientation:portrait) {
+  .card {
+  border: solid 4px #020214;
+  box-shadow: -10px 10px #000000;
+}
+
   .card .info-card .text {
   margin: 0 1rem;
-}
-  .card:hover .mask {
-  display: none;
 }
 .card:hover {
-  display: none;
-}
-}
-
-/* @media (orientation:portrait) {
-  .card .info-card .text {
-  margin: 0 1rem;
-}
-
-  .card .info-card .technologies .technology-item {
-    height: .8rem;
+    transform: none;
+    box-shadow: -10px 10px #000000;
   }
-
-  .card .info-card p {
-  font-size: 3vw;
+  .card:hover .img-card {
+    filter: none;
+  }
+  .card:hover .mask {
+    opacity: 0;
+  }
 }
-} */
+
 </style>
