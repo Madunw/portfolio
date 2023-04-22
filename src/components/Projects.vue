@@ -25,6 +25,8 @@ import ethersIcon from '@/assets/icons/ethers-icon.svg';
 import alchemyIcon from '@/assets/icons/alchemy-icon.png';
 import elementUiIcon from '@/assets/icons/element-ui-icon.svg';
 import viteIcon from '@/assets/icons/vite-icon.svg';
+import axiosIcon from '@/assets/icons/axios-icon.png';
+import echartsIcon from '@/assets/icons/echarts-icon.png';
 
 export default {
   name: 'Projects',
@@ -45,6 +47,7 @@ export default {
           { name: 'CSS', icon: cssIcon },
           { name: 'JavaScript', icon: javascriptIcon },
           { name: 'ElementUI', icon: elementUiIcon },
+          { name: 'Echarts', icon: echartsIcon },
           { name: 'Solidity', icon: solidityIcon },
           { name: 'OpenZeppelin', icon: openzeppelinIcon },
           { name: 'EthersJS', icon: ethersIcon },
@@ -67,6 +70,7 @@ export default {
         { name: 'ElementUI', icon: elementUiIcon },
         { name: 'Vite', icon: viteIcon },
         { name: 'EthersJS', icon: ethersIcon },
+        { name: 'Axios', icon: axiosIcon },
         { name: 'Alchemy', icon: alchemyIcon },
       ],
       },
